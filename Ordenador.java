@@ -13,6 +13,11 @@ public class Ordenador extends Usuario {
 		}
 		return miOrdenador;
 	}
+	
+	public void ponerBarcos() {
+		getFlota().colocarOrdenador();
+	}
+	
 	public void ponerEscudo() {
 		Escudo miEscudo = delEscudo();
 	}
