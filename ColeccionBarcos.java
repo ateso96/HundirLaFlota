@@ -20,11 +20,19 @@ public class ColeccionBarcos {
 		throw new UnsupportedOperationException();
 	}
 
-	public void colocar() {
+	public void colocarJugador() {
 		Iterator<Barco> itr = getIterador();
 		while (itr.hasNext()) {
 			Barco unBarco = itr.next();
-			unBarco.colocarBarco();
+			unBarco.colocarBarcoJugador();
+		}
+	}
+	
+	public void colocarOrdenador() {
+		Iterator<Barco> itr = getIterador();
+		while (itr.hasNext()) {
+			Barco unBarco = itr.next();
+			unBarco.colocarBarcoOrdenador();
 		}
 	}
 
