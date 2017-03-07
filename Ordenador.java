@@ -4,7 +4,7 @@ public class Ordenador extends Usuario {
 	private static Ordenador miOrdenador;
 
 	private Ordenador() {
-		
+		super();
 	}
 
 	public static Ordenador getOrdenador() {
