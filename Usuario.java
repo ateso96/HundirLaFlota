@@ -19,8 +19,8 @@ public abstract class Usuario {
 		registroDisparos = new ArrayList<Coordenada>();
 	}
 	
-	public void ponerBarcos() {
-		flota.colocar();
+	public ColeccionBarcos getFlota() {
+		return flota;
 	}
 
 	private void reducirArmamento() {
