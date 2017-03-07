@@ -16,7 +16,8 @@ public abstract class Usuario {
 		flota = new ColeccionBarcos();
 		flotaAdversario = flota;
 		registroDisparos = new ArrayList<Coordenada>();
-
+	}
+	
 	public void ponerBarcos() {
 		flota.colocar();
 	}
