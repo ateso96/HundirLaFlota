@@ -11,9 +11,8 @@ public class ColeccionBarcos {
 		throw new UnsupportedOperationException();
 	}
 
-	private Iterator<Barco> getIterador() {
-		// TODO - implement ColeccionBarcos.getIterador
-		throw new UnsupportedOperationException();
+		private Iterator<Barco> getIterador() {
+		return col.iterator();
 	}
 
 	public void delBarco() {
@@ -22,8 +21,11 @@ public class ColeccionBarcos {
 	}
 
 	public void colocar() {
-		// TODO - implement ColeccionBarcos.colocar
-		throw new UnsupportedOperationException();
+		Iterator<Barco> itr = getIterador();
+		while (itr.hasNext()) {
+			Barco unBarco = itr.next();
+			unBarco.colocarBarco();
+		}
 	}
 
 	private Barco getBarco() {
