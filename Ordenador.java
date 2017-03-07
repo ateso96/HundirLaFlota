@@ -13,5 +13,10 @@ public class Ordenador extends Usuario {
 		}
 		return miOrdenador;
 	}
-
+	public void ponerEscudo() {
+		Escudo miEscudo = delEscudo();
+	}
+	private Escudo delEscudo() {
+		return null;
+	}
 }
