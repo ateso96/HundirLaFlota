@@ -4,18 +4,18 @@ public class HundirFlota {
 	private static HundirFlota miHundirFlota;
 
 	private HundirFlota() {
-		// TODO - implement HundirFlota.HundirFlota
-		throw new UnsupportedOperationException();
+		
 	}
 
 	public static HundirFlota getHundirFlota() {
-		// TODO - implement HundirFlota.getHundirFlota
-		throw new UnsupportedOperationException();
+		if (miHundirFlota == null)
+			miHundirFlota = new HundirFlota();
+		return miHundirFlota;
 	}
 
 	public void iniciarJuego() {
-		// TODO - implement HundirFlota.iniciarJuego
-		throw new UnsupportedOperationException();
+		Jugador.getJugador().ponerBarcos();
+		Ordenador.getOrdenador().ponerBarcos();
 	}
 
 	private void inicializarArsenales() {
