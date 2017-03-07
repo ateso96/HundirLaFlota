@@ -2,7 +2,7 @@ package packModelo;
 import java.util.Collection;
 
 public class Almacen {
-
+//honion
 	private Collection<Armamento> existencias;
 	private static Almacen miAlmacen;
 
