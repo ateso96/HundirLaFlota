@@ -28,18 +28,107 @@ public abstract class Barco {
 	}
 
 	private boolean hayEscudo() {
-		// TODO - implement Barco.hayEscudo
-		throw new UnsupportedOperationException();
+		boolean hay=true;;
+		if(escudo==null){
+			hay=false;
+		}
+		return hay;
 	}
 
 	public void colocarBarco() {
-		// TODO - implement Barco.colocarBarco
-		throw new UnsupportedOperationException();
+		int cont=0;
+		coordInicio=pedirCoordenada();
+		orientacion=pedirOrientacion();
+		coordFin=calcCoordFinal();
+		while (coordenadaOcupada(coordInicio)|| calcularFueraTab()|| comprobarSeparados()==false){
+			System.out.println("vuelva a introducir coordenadas");
+			coordInicio=pedirCoordenada();
+			orientacion=pedirOrientacion();
+			coordFin=calcCoordFinal();
+		}
+		ponerEscudo(escudo);
+	}
+	private boolean coordenadaOcupada(Coordenada coor){
+		boolean ocupada=false;
+		if(coor!=null){
+			ocupada=true;
+		}
+		
+		return ocupada;
 	}
 
 	private boolean comprobarSeparados() {
-		// TODO - implement Barco.comprobarSeparados
-		throw new UnsupportedOperationException();
+		int fila=coordInicio.getFila();
+		int fila2= coordFin.getFila();
+		int col=coordInicio.getFila();
+		int col2= coordFin.getFila();
+		int i= fila;
+		int j= col;
+		Coordenada coorActual = null;
+		boolean separados=true;
+		switch(orientacion){
+		case 'U':
+			i=i+1;
+			while (i<=fila2||separados){
+				coorActual.crearCoordenada(i, j);
+				if(coordenadaOcupada(coorActual)){
+					separados=false;
+				}
+
+			}
+			break;
+		case 'D':
+			i=i-1;
+			while (i>=fila2||separados){
+				coorActual.crearCoordenada(i, j);
+				if(coordenadaOcupada(coorActual)){
+					separados=false;
+				}
+
+			}
+			break;
+		case 'L':
+			j=j-1;
+			while (j>=col2||separados){
+				coorActual.crearCoordenada(i, j);
+				if(coordenadaOcupada(coorActual)){
+					separados=false;
+				}
+
+			}
+			break;
+		case 'R':
+			j=j+1;
+			while (i<=col2||separados){
+				coorActual.crearCoordenada(i, j);
+				if(coordenadaOcupada(coorActual)){
+					separados=false;
+				}
+
+			}
+			break;
+			
+		
+		}
+		
+		return separados;
+	}
+
+	private Coordenada pedirCoordenada() {
+		Coordenada coor=null;
+		
+		int f;
+		int c;
+		System.out.println("Introduzca Coordenadas");
+		Scanner sc= new Scanner(System.in);
+		f= sc.nextInt();
+		c=sc.nextInt();		
+		coor.crearCoordenada(f, c);
+		return coor;
+		
+		
+		
+		
 	}
 
 	private char pedirOrientacion() {
@@ -54,8 +143,14 @@ public abstract class Barco {
 	}
 
 	private boolean calcularFueraTab() {
-		// TODO - implement Barco.calcularFueraTab
-		throw new UnsupportedOperationException();
+		int fila= coordFin.getFila();
+		int col= coordFin.getCol();
+		boolean fuera=false;
+		if(fila>10||col>10){
+			fuera=true;
+		}
+		return fuera;
+		
 	}
 
 	private Coordenada calcCoordFinal() {
@@ -93,16 +188,8 @@ public abstract class Barco {
 	 * @param pEscudo
 	 */
 	public void ponerEscudo(Escudo pEscudo) {
-		// TODO - implement Barco.ponerEscudo
-		throw new UnsupportedOperationException();
-	}
-	
-	public Coordenada pedirCoordenada() {
-		Coordenada coor = null;
-		int f = (int) (Math.random() * 10) + 1;
-		int c = (int) (Math.random() * 10) + 1;
-		coor.crearCoordenada(f, c);
-		return coor;		
+		pEscudo= new Escudo("entero");
+		
 	}
 
 }
