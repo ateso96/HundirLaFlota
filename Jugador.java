@@ -25,5 +25,17 @@ public class Jugador extends Usuario {
 		nombre = sc.nextLine();
 		return nombre;
 	}
+	
+	public Coordenada pedirCoordenada() {
+		Coordenada coor=null;
+		int f;
+		int c;
+		System.out.println("Introduzca Coordenadas");
+		Scanner sc= new Scanner(System.in);
+		f= sc.nextInt();
+		c=sc.nextInt();		
+		coor.crearCoordenada(f, c);
+		return coor;		
+	}
 
 }
