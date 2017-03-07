@@ -6,12 +6,18 @@ public class ColeccionBarcos {
 
 	private Collection<Barco> col;
 
-	public ColeccionBarcos() {
-		// TODO - implement ColeccionBarcos.ColeccionBarcos
-		throw new UnsupportedOperationException();
+		public ColeccionBarcos() {
+		for (int i = 1; i <= 4; i ++)
+			col.add(FactoryBarcos.getFactoryBarcos().crearBarco("Fragata"));
+		for (int i = 1; i <= 3; i ++)
+			col.add(FactoryBarcos.getFactoryBarcos().crearBarco("Destructor"));
+		for (int i = 1; i <= 2; i ++)
+			col.add(FactoryBarcos.getFactoryBarcos().crearBarco("Submarino"));
+		for (int i = 1; i <= 1; i ++)
+			col.add(FactoryBarcos.getFactoryBarcos().crearBarco("Portaaviones"));
 	}
 
-		private Iterator<Barco> getIterador() {
+	private Iterator<Barco> getIterador() {
 		return col.iterator();
 	}
 
