@@ -6,14 +6,16 @@ public abstract class Usuario {
 	private int dinero = 500;
 	private ColeccionArmamento armamento;
 	private ColeccionBarcos flota;
+	private ColeccionBarcos flotaAdversario;
 	private Collection<Coordenada> registroDisparos;
 	private int reparaciones = 10;
 	private int usosRadar = 3;
 
 	public Usuario() {
-		// TODO - implement Usuario.Usuario
-		throw new UnsupportedOperationException();
-	}
+		armamento = new ColeccionArmamento();
+		flota = new ColeccionBarcos();
+		flotaAdversario = flota;
+		registroDisparos = new ArrayList<Coordenada>();
 
 	public void ponerBarcos() {
 		// TODO - implement Usuario.ponerBarcos
