@@ -96,5 +96,13 @@ public abstract class Barco {
 		// TODO - implement Barco.ponerEscudo
 		throw new UnsupportedOperationException();
 	}
+	
+	public Coordenada pedirCoordenada() {
+		Coordenada coor = null;
+		int f = (int) (Math.random() * 10) + 1;
+		int c = (int) (Math.random() * 10) + 1;
+		coor.crearCoordenada(f, c);
+		return coor;		
+	}
 
 }
