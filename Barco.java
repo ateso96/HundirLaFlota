@@ -35,19 +35,32 @@ public abstract class Barco {
 		return hay;
 	}
 
-	public void colocarBarco() {
+	public void colocarBarcoJugador() {
 		int cont=0;
-		coordInicio=pedirCoordenada();
-		orientacion=pedirOrientacion();
-		coordFin=calcCoordFinal();
-		while (coordenadaOcupada(coordInicio)|| calcularFueraTab()|| comprobarSeparados()==false){
+		coordInicio = Jugador.getJugador().pedirCoordenada();
+		orientacion = pedirOrientacion();
+		coordFin = calcCoordFinal();
+		while (coordenadaOcupada(coordInicio) || calcularFueraTab() || !comprobarSeparados()){
 			System.out.println("vuelva a introducir coordenadas");
-			coordInicio=pedirCoordenada();
-			orientacion=pedirOrientacion();
-			coordFin=calcCoordFinal();
+			coordInicio = Jugador.getJugador().pedirCoordenada();
+			orientacion = pedirOrientacion();
+			coordFin = calcCoordFinal();
 		}
-		ponerEscudo(escudo);
 	}
+	
+	public void colocarBarcoOrdenador() {
+		int cont=0;
+		coordInicio = Ordenador.getOrdenador().pedirCoordenada();
+		orientacion = pedirOrientacion();
+		coordFin = calcCoordFinal();
+		while (coordenadaOcupada(coordInicio) || calcularFueraTab() || !comprobarSeparados()){
+			System.out.println("vuelva a introducir coordenadas");
+			coordInicio = Ordenador.getOrdenador().pedirCoordenada();
+			orientacion = pedirOrientacion();
+			coordFin = calcCoordFinal();
+		}
+	}
+	
 	private boolean coordenadaOcupada(Coordenada coor){
 		boolean ocupada=false;
 		if(coor!=null){
