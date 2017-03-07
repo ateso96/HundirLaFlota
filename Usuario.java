@@ -18,8 +18,7 @@ public abstract class Usuario {
 		registroDisparos = new ArrayList<Coordenada>();
 
 	public void ponerBarcos() {
-		// TODO - implement Usuario.ponerBarcos
-		throw new UnsupportedOperationException();
+		flota.colocar();
 	}
 
 	private void reducirArmamento() {
