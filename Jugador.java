@@ -7,7 +7,8 @@ public class Jugador extends Usuario {
 	private static Jugador miJugador;
 
 	private Jugador() {
-		
+		super();
+		nombre = pedirNombre();
 	}
 
 	public static Jugador getJugador() {
