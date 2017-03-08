@@ -11,20 +11,9 @@ public abstract class Barco {
 	private static int precioReparacion = 30;
 	private char orientacion;
 
-	/**
-	 * 
-	 * @param pEstado
-	 */
-	public Barco(String pEstado, char pOrientacion,Escudo pEscudo, Coordenada pCoordInicio,
-			Coordenada pCoordFin, int pLongitud) {
-		estado=pEstado;
-		orientacion=pOrientacion;
-		escudo=pEscudo ;
-		coordInicio=pCoordInicio;
-		coordFin= pCoordFin;
-		longitud=pLongitud;
-		
-		
+	public Barco (int pLongitud) {
+		estado = "Ok";
+		longitud = pLongitud;
 	}
 
 	private boolean hayEscudo() {
