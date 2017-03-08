@@ -1,5 +1,5 @@
 package packModelo;
-public abstract class FactoryArmamento {
+public class FactoryArmamento {
 
 	private static FactoryArmamento miFactoryArmamento;
 
@@ -14,8 +14,7 @@ public abstract class FactoryArmamento {
 
 	public static FactoryArmamento getFactoryArmamento() {
 		if (miFactoryArmamento == null)
-			miFactoryArmamento = new FactoryArmamento() {
-			};
+			miFactoryArmamento = new FactoryArmamento();
 		return miFactoryArmamento;
 	}
 
