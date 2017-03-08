@@ -1,9 +1,11 @@
 package packModelo;
 public class Bomba extends Arma {
 
+	private static int precio = 10;
+	private static char danoZona;
+
 	public Bomba() {
-		// TODO - implement Bomba.Bomba
-		throw new UnsupportedOperationException();
+		super(precio, danoZona);
 	}
 
 }
