@@ -1,9 +1,11 @@
 package packModelo;
 public class MisilEO extends MisilDirigido {
 
+	private static int precio = 50;
+	private static char danoZona;
+
 	public MisilEO() {
-		// TODO - implement MisilEO.MisilEO
-		throw new UnsupportedOperationException();
+		super(precio, danoZona);
 	}
 
 }
