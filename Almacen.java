@@ -2,11 +2,10 @@ package packModelo;
 import java.util.Collection;
 
 public class Almacen {
-//honion
-	private Collection<Armamento> existencias;
-	private static Almacen miAlmacen;
 
-private Almacen() {
+	private Collection<Armamento> existencias;
+
+	public Almacen() {
 		for (int i = 1; i <= 20; i ++)
 			existencias.add(FactoryArmamento.getFactoryArmamento().crearArma("Bomba"));
 		for (int i = 1; i <= 6; i ++)
@@ -21,19 +20,11 @@ private Almacen() {
 			existencias.add(FactoryArmamento.getFactoryArmamento().crearArma("Escudo"));
 	}
 
-	public static Almacen getAlmacen() {
-		if (miAlmacen == null)
-			miAlmacen = new Almacen();
-		return miAlmacen;
-	}
-
 	public Armamento comprar() {
+		
 	}
 	
 	private void reducirExistencias(Armamento pArmamento) {
-	}
-
-	public void inicializarAlmacen() {
 	}
 
 }
