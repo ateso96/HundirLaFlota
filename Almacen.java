@@ -19,8 +19,12 @@ public class Almacen {
 		for (int i = 1; i <= 2; i ++)
 			existencias.add(FactoryArmamento.getFactoryArmamento().crearArma("Escudo"));
 	}
+	
+	private Iterator<Armamento> getIterador() {
+		return existencias.iterator();
+	}
 
-	public Armamento comprar() {
+	public Armamento comprar(String pArma) {
 		
 	}
 	
