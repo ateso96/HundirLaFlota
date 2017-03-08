@@ -1,9 +1,8 @@
 package packModelo;
 public abstract class MisilDirigido extends Arma {
 
-	public MisilDirigido() {
-		// TODO - implement MisilDirigido.MisilDirigido
-		throw new UnsupportedOperationException();
+	public MisilDirigido(int pPrecio, char pZona) {
+		super(pPrecio, pZona);
 	}
 
 }
