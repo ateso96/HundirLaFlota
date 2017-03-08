@@ -2,12 +2,13 @@ package packModelo;
 public class Escudo extends Armamento {
 
 	private String estado;
+	private static int precio = 30;
 
 	public Escudo() {
-		// TODO - implement Escudo.Escudo
-		throw new UnsupportedOperationException();
+		super(precio);
+		estado = "Ok";
 	}
-
+	
 	public void danoRecibido() {
 		// TODO - implement Escudo.dañoRecibido
 		throw new UnsupportedOperationException();
