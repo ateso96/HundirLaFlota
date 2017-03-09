@@ -16,7 +16,7 @@ public abstract class Barco {
 		longitud = pLongitud;
 	}
 
-	private boolean hayEscudo() {
+	public boolean hayEscudo() {
 		boolean hay=true;;
 		if(escudo==null){
 			hay=false;
@@ -25,7 +25,7 @@ public abstract class Barco {
 	}
 
 	public void colocarBarcoJugador() {
-		int cont=0;
+		
 		coordInicio = Jugador.getJugador().pedirCoordenada();
 		orientacion = pedirOrientacion();
 		coordFin = calcCoordFinal();
@@ -173,8 +173,7 @@ public abstract class Barco {
 	 * @param pEscudo
 	 */
 	public void ponerEscudo(Escudo pEscudo) {
-		pEscudo= new Escudo("entero");
-		
+		escudo=pEscudo;
 	}
 
 }
