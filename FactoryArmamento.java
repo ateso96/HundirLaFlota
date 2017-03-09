@@ -4,8 +4,7 @@ public class FactoryArmamento {
 	private static FactoryArmamento miFactoryArmamento;
 
 	private FactoryArmamento() {
-		// TODO - implement FactoryArmamento.FactoryArmamento
-		throw new UnsupportedOperationException();
+
 	}
 
 		private FactoryArmamento() {
