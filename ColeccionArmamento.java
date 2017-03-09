@@ -28,6 +28,14 @@ public class ColeccionArmamento {
 	}
 
 	public Escudo delEscudo() {
+		Iterator<Armamento> itr= getIterador();
+		while (itr.hasNext()){
+			Armamento miArmamento= itr.next();
+			if(miArmamento instanceof Escudo){
+				itr.remove();
+				return (Escudo) miArmamento;	
+			}
+		}
 		return null;
 	}
 
