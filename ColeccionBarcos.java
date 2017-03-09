@@ -47,13 +47,26 @@ public class ColeccionBarcos {
 		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * 
-	 * @param pEscudo
-	 */
-	public void ponerEscudo(Escudo pEscudo) {
-		// TODO - implement ColeccionBarcos.ponerEscudo
-		throw new UnsupportedOperationException();
+	public void ponerEscudoJugador(Escudo pEscudo) {
+		Barco miBarco=null;//deberá contener el barco seleccionado
+		Iterator<Barco> itr = getIterador();
+		while (itr.hasNext()) {
+			Barco unBarco = itr.next();
+			if(unBarco.equals(miBarco) ){
+				if (!miBarco.hayEscudo())
+					miBarco.ponerEscudo(pEscudo);	
+			}
+		}
+	}
+	
+	public void ponerEscudoOrdenador(Escudo pEscudo) {
+		Iterator<Barco> itr = getIterador();
+		while (itr.hasNext()) {
+			Barco unBarco = itr.next();
+			if (!unBarco.hayEscudo())
+				unBarco.ponerEscudo(pEscudo);
+			
+		
 	}
 
 }
