@@ -22,6 +22,10 @@ public abstract class Usuario {
 	public ColeccionBarcos getFlota() {
 		return flota;
 	}
+	
+	public ColeccionArmamento getArmamento(){
+		return armamento;
+	}
 
 	private void reducirArmamento() {
 		// TODO - implement Usuario.reducirArmamento
