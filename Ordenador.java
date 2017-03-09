@@ -20,8 +20,9 @@ public class Ordenador extends Usuario {
 	
 	public void ponerEscudo() {
 		Escudo miEscudo = delEscudo();
+		getFlota().ponerEscudoOrdenador(miEscudo);
 	}
 	private Escudo delEscudo() {
-		return null;
+		return getArmamento().delEscudo();
 	}
 }
